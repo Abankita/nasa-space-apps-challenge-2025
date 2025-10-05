@@ -217,6 +217,19 @@ function addEventListeners() {
         selectedAsteroidData = sceneData.asteroids.find(a => a.id === asteroidSelect.value);
         updateInfoPanel();
     });
+
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    zoomInBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const newDistance = Math.max(controls.minDistance, camera.position.length() - 1);
+        camera.position.setLength(newDistance);
+    });
+    zoomOutBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const newDistance = Math.min(controls.maxDistance, camera.position.length() + 1);
+        camera.position.setLength(newDistance);
+    });
 }
 
 function animate() {

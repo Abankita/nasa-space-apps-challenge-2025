@@ -74,6 +74,18 @@ select, button {
     background-color: #333;
     color: #fff;
     font-size: 1em;
+    cursor: pointer;
+}
+
+button, #zoom-controls button, #simulate-button, #toggle-ui {
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:hover, #zoom-controls button:hover, #simulate-button:hover, #toggle-ui:hover {
+    background-color: #444;
+    color: #e1e6ea;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 #info-panel {
