@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Impact Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg"></canvas>
+
+    <div id="ui-container">
+        <h1>Cosmic Hazard Dashboard</h1>
+
+        <div id="mode-selector">
+            <input type="radio" id="modeReal" name="mode" value="real" checked>
+            <label for="modeReal">Real NEO</label>
+            <input type="radio" id="modeCustom" name="mode" value="custom">
+            <label for="modeCustom">Custom Asteroid</label>
+        </div>
+
+        <div id="real-asteroid-controls">
+            <label for="asteroid-select">Select Near-Earth Object:</label>
+            <select id="asteroid-select">
+                <option>Loading...</option>
+            </select>
+        </div>
+
+        <div id="custom-asteroid-controls" style="display: none;">
+    <label for="diameter-slider">Diameter (m): <span id="diameter-value">100</span></label>
+    <input type="range" id="diameter-slider" min="10" max="10000" value="100">
+    <br>
+    <label for="velocity-slider">Velocity (km/s): <span id="velocity-value">20</span></label>
+    <input type="range" id="velocity-slider" min="11" max="72" value="20">
+</div>
+
+        <div id="info-panel">
+            <h2>Threat Analysis</h2>
+            <p><strong>Diameter:</strong> <span id="info-diameter">-</span></p>
+            <p><strong>Velocity:</strong> <span id="info-velocity">-</span></p>
+            <p><strong>Impact Energy:</strong> <span id="info-energy">-</span></p>
+            <div id="deflection-panel"></div>
+        </div>
+        
+        <button id="simulate-button">Simulate Earth Impact</button>
+    </div>
+
+    <div id="zoom-controls" style="position: absolute; top: 20px; right: 20px; z-index: 10;">
+        <button id="zoom-in">Zoom In</button>
+        <button id="zoom-out">Zoom Out</button>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

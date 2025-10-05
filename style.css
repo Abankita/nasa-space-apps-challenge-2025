@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    font-family: inter;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden; 
+}
+
+@media (max-width: 600px) {
+    #ui-container {
+        position: static;
+        width: 95vw;
+        max-width: 100vw;
+        left: 0;
+        top: 0;
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 0;
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    select, button {
+        font-size: 1em;
+        padding: 8px;
+    }
+    #info-panel {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    #zoom-controls {
+        position: static !important;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    #bg {
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+#ui-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 350px;
+    padding: 20px;
+    background-color: rgba(20, 20, 30, 0.8); 
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+}
+
+#info-panel {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#info-panel h2 {
+    margin-top: 0;
+}

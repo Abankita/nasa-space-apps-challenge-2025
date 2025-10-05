@@ -1,0 +1,9 @@
+
+# Python virtual environment
+venv/
+
+# Secrets file
+config.py
+
+# VS Code settings
+.vscode/
